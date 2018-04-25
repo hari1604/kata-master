@@ -72,9 +72,7 @@ var data = [
     }
 
     function isValidDate(date) {  
-        
-        console.log(date,"=== This is from validation method");
-        
+	
         var dateRegEx       = /[0-9]{2}\/[0-9]{2}\/[0-9]{4}/;
     
         if(date.match(dateRegEx)){
@@ -109,7 +107,6 @@ var data = [
 
     document.querySelector('button').addEventListener('click', function () {
         var task = mapFormElements(this.form);
-        console.log(task);
         var dateSplit = task.date.split("-");
         dateSplit[3] = dateSplit[0];
         dateSplit.splice(0, 1);
